@@ -1,0 +1,273 @@
+/* ============================================================
+   style.css — DevShikhi | HTML Tutorial Content Styles
+============================================================ */
+
+/* ── Content Area ── */
+.content {
+  flex: 1;
+  padding: 32px 40px 60px;
+  min-width: 0;
+  background: #22242a;
+}
+
+.content section { margin-bottom: 60px; }
+
+.content h1.center {
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.content p.center {
+  color: #ddd;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.center { text-align: center; }
+
+/* ── Divider ── */
+.section-divider {
+  border: none;
+  border-top: 4px dashed #c6c6c6;
+  margin: 28px 0;
+}
+
+/* ── Example Box ── */
+.example-box {
+  background: #f1f8ff;
+  border: 1px solid #2c2e35;
+  border-radius: 10px;
+  padding: 24px 28px;
+  margin-bottom: 20px;
+}
+
+.example-box h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #282a35;
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.example-box h3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #000;
+  margin: 16px 0 8px;
+}
+
+.example-box p {
+  font-size: 15px;
+  line-height: 1.85;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.example-box ol {
+  padding-left: 22px;
+  margin: 10px 0;
+}
+.example-box ol li {
+  font-size: 15px;
+  line-height: 2;
+  color: #374151;
+  list-style-type: decimal;
+}
+
+/* ── Inline Code ── */
+code {
+  font-family: Consolas, Menlo, "Courier New", monospace;
+  background: #e9ecef;
+  color: #c7254e;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* ── Code Box ── */
+.code-box {
+  background: #2c2e35;
+  color: #81c995;
+  font-family: Consolas, Menlo, monospace;
+  font-size: 14px;
+  line-height: 1.9;
+  padding: 16px 20px;
+  border-radius: 8px;
+  border-left: 5px solid #04aa6d;
+  overflow-x: auto;
+  white-space: pre;
+  margin: 10px 0 16px;
+}
+
+/* ── Warning Box ── */
+.warning-box {
+  background: rgba(245,158,11,.08);
+  border-left: 4px solid #f59e0b;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  border-radius: 0 8px 8px 0;
+  font-size: 15px;
+  line-height: 1.7;
+  box-shadow: 2px 4px 12px rgba(245,158,11,.12);
+}
+
+/* ── Tip Box ── */
+.tip-box {
+  background: rgba(34,197,94,.08);
+  border-left: 4px solid #22c55e;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  border-radius: 0 8px 8px 0;
+  font-size: 15px;
+  line-height: 1.7;
+  box-shadow: 2px 4px 12px rgba(34,197,94,.1);
+}
+
+/* ── Tag Badge ── */
+.tag-badge {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 100px;
+  vertical-align: middle;
+  margin-left: 6px;
+}
+
+/* ── Table ── */
+/* example-box-এর ভেতরে table overflow ঠেকাতে */
+.example-box {
+  overflow-x: hidden; /* extra safety */
+}
+
+.size-chart {
+  width: 100%;
+  min-width: 500px;        /* ছোট screen-এ scroll হবে */
+  border-collapse: collapse;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+/* Table wrapper — overflow scroll */
+.example-box .size-chart {
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  min-width: unset;        /* display:block হলে min-width দরকার নেই */
+}
+
+/* table ট্যাগকে আলাদা রাখো */
+table.size-chart {
+  display: table;
+  min-width: 480px;
+}
+
+.size-chart th {
+  background: #282a35;
+  color: #fff;
+  padding: 10px 14px;
+  text-align: left;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.size-chart td {
+  padding: 9px 14px;
+  border-bottom: 1px solid #c7c7c7;
+  color: #000;
+  vertical-align: middle;
+}
+.size-chart tr:nth-child(even) td { background: #f9fafb; }
+.size-chart tr:hover td { background: #04AA6D !important; color: #fff; }
+
+/* ── Heading demos inside example-box ── */
+.example-box h1 { font-size: 2em; font-weight: 700; margin: 8px 0; }
+.example-box h4 { font-size: 1em; font-weight: 600; }
+.example-box h5 { font-size: .83em; }
+.example-box h6 { font-size: .67em; }
+
+/* ================================================================
+   RESPONSIVE — Tutorial Content
+================================================================ */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .content { padding: 26px 26px 50px; }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .content {
+    padding: 18px 14px 80px; /* bottom: 80px — FAB button clearance */
+  }
+
+  .content h1.center { font-size: 20px; }
+  .content p.center  { font-size: 13px; }
+
+  .example-box {
+    padding: 14px 14px;
+    border-radius: 8px;
+    margin-bottom: 14px;
+  }
+
+  .example-box h2 { font-size: 16px; }
+  .example-box h3 { font-size: 14px; margin: 12px 0 6px; }
+  .example-box p  { font-size: 14px; line-height: 1.75; }
+
+  .example-box ol li { font-size: 14px; }
+
+  code { font-size: 13px; }
+
+  .code-box {
+    font-size: 12px;
+    padding: 12px 14px;
+    line-height: 1.75;
+  }
+
+  /* Table — scroll already handled globally */
+  .size-chart {
+    font-size: 13px;
+  }
+  .size-chart th,
+  .size-chart td {
+    padding: 7px 10px;
+  }
+
+  .warning-box,
+  .tip-box {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+
+  .tag-badge {
+    font-size: 11px;
+    padding: 2px 8px;
+    display: inline-block;
+    margin: 3px 0 0 4px;
+  }
+
+  .section-divider { margin: 16px 0; }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .content { padding: 14px 10px 80px; }
+
+  .content h1.center { font-size: 17px; }
+
+  .example-box { padding: 12px 10px; }
+  .example-box h2 { font-size: 14px; }
+  .example-box h3 { font-size: 13px; }
+  .example-box p  { font-size: 13px; }
+
+  .code-box { font-size: 11px; padding: 10px 10px; }
+  code       { font-size: 12px; }
+
+  .tag-badge { font-size: 10px; }
+}
