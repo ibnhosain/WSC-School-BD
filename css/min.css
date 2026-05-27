@@ -1,42 +1,70 @@
 /* ============================================================
-   min.css — DevShikhi | Mobile-first Responsive CSS
+   min.css — WSC School BD | Mobile-first Responsive CSS
 ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&display=swap');
 
 /* ── Variables ── */
 :root {
-  --accent:      #04aa6d;
-  --accent2:     #fff4a3;
-  --dark:        #282a35;
-  --border:      #ddd;
-  --header-h:    70px;
+  --accent: #04aa6d;
+  --accent2: #fff4a3;
+  --dark: #1D2B3A;
+  /* গাঢ় নেভি — বিশুদ্ধ কালোর চেয়ে চোখবান্ধব */
+  --border: #D5CFC6;
+  /* উষ্ণ বর্ডার */
+  --header-h: 70px;
 }
 
 /* ── Reset ── */
-*, *::before, *::after {
-  padding: 0; margin: 0;
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
   font-family: "Tiro Bangla", 'Times New Roman', serif;
   font-style: normal;
   font-weight: 300;
 }
-html { scroll-behavior: smooth; }
-body { color: #000; background: #fff; overflow-x: hidden; }
-ul   { list-style: none; }
-a    { text-decoration: none; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #1E2B3C !important;
+  /* গাঢ় নেভি — বিশুদ্ধ কালোর চেয়ে নরম */
+  background: #F5F1E8 !important;
+  /* উষ্ণ ক্রিম — বিশুদ্ধ সাদার চেয়ে চোখবান্ধব */
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
 
 /* ============================================================
    HEADER
 ============================================================ */
 header {
   position: fixed;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: var(--header-h);
-  background: rgba(255,255,255,0.97);
+  background: rgba(245, 241, 232, 0.97);
+  /* উষ্ণ ক্রিম */
   border-bottom: 2px solid var(--border);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
   z-index: 1000;
 }
 
@@ -54,7 +82,9 @@ header {
   height: 100%;
 }
 
-header img { width: 62px; }
+header img {
+  width: 62px;
+}
 
 /* ── Desktop Nav ── */
 .nav-list {
@@ -63,20 +93,25 @@ header img { width: 62px; }
 }
 
 .nav-list li {
-  border-left: 1px solid #333;
+  border-left: 1px solid #C8C2B8;
   padding-left: 20px;
 }
 
-.nav-list li.bor_none { border: none; }
+.nav-list li.bor_none {
+  border: none;
+}
 
 .nav-list li a {
   font-size: 17px;
   font-weight: 500;
-  color: #000;
+  color: #1E2B3C;
   padding-right: 16px;
   transition: color 0.2s;
 }
-.nav-list li a:hover { color: var(--accent); }
+
+.nav-list li a:hover {
+  color: var(--accent);
+}
 
 /* ── Hamburger ── */
 .hamburger {
@@ -91,16 +126,27 @@ header img { width: 62px; }
   padding: 0;
   z-index: 1100;
 }
+
 .hamburger span {
   display: block;
   height: 3px;
-  background: #222;
+  background: #1E2B3C;
   border-radius: 2px;
   transition: all 0.28s ease;
 }
-.hamburger.open span:nth-child(1) { transform: translateY(8.5px) rotate(45deg); }
-.hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
-.hamburger.open span:nth-child(3) { transform: translateY(-8.5px) rotate(-45deg); }
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(8.5px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-8.5px) rotate(-45deg);
+}
 
 /* ── Mobile Nav Drawer ── */
 .nav-drawer {
@@ -109,28 +155,36 @@ header img { width: 62px; }
   top: var(--header-h);
   left: 0;
   width: 100%;
-  background: #fff;
+  background: #F5F1E8;
   border-bottom: 2px solid var(--border);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
   z-index: 999;
   padding: 8px 0 16px;
   transform: translateY(-110%);
   transition: transform 0.3s ease;
 }
-.nav-drawer.open { transform: translateY(0); }
 
-.nav-drawer ul { flex-direction: column; }
+.nav-drawer.open {
+  transform: translateY(0);
+}
 
-.nav-drawer ul li { border-bottom: 1px solid #eee; }
+.nav-drawer ul {
+  flex-direction: column;
+}
+
+.nav-drawer ul li {
+  border-bottom: 1px solid var(--border);
+}
 
 .nav-drawer ul li a {
   display: block;
   padding: 14px 24px;
   font-size: 16px;
   font-weight: 500;
-  color: #000;
+  color: #1E2B3C;
   transition: background 0.2s, color 0.2s;
 }
+
 .nav-drawer ul li a:hover {
   background: var(--accent);
   color: #fff;
@@ -159,32 +213,46 @@ aside {
   top: var(--header-h);
   height: calc(100vh - var(--header-h));
   overflow-y: auto;
-  background: #f1f8ff;
+  background: #E8F1FA;
+  /* মৃদু নীলাভ — পড়তে সহজ */
   padding: 16px 0;
   scrollbar-width: thin;
-  scrollbar-color: #c0c0c0 #f1f8ff;
+  scrollbar-color: #B0C8DE #E8F1FA;
 }
-aside::-webkit-scrollbar { width: 4px; }
-aside::-webkit-scrollbar-thumb { background: #c0c0c0; border-radius: 4px; }
 
-aside ul { flex-direction: column; }
+aside::-webkit-scrollbar {
+  width: 4px;
+}
 
-aside ul li { border-bottom: 1px solid rgba(193,193,193,0.3); }
+aside::-webkit-scrollbar-thumb {
+  background: #B0C8DE;
+  border-radius: 4px;
+}
+
+aside ul {
+  flex-direction: column;
+}
+
+aside ul li {
+  border-bottom: 1px solid rgba(160, 190, 220, 0.3);
+}
 
 aside ul li a {
   display: block;
   padding: 10px 18px;
   font-size: 14px;
-  color: #1a1a1a;
+  color: #1E2B3C;
   border-left: 3px solid transparent;
   transition: background 0.2s, color 0.2s, border-color 0.2s;
   line-height: 1.4;
 }
+
 aside ul li a:hover {
   background: #04AA6D !important;
   color: #fff !important;
   border-left-color: #028a58;
 }
+
 aside a.active {
   background: #04AA6D !important;
   color: #fff !important;
@@ -193,8 +261,13 @@ aside a.active {
 }
 
 /* Sidebar toggle — hidden on desktop */
-.sidebar-toggle   { display: none; }
-.sidebar-overlay  { display: none; }
+.sidebar-toggle {
+  display: none;
+}
+
+.sidebar-overlay {
+  display: none;
+}
 
 /* ============================================================
    INDEX PAGE
@@ -204,16 +277,47 @@ aside a.active {
   text-align: center;
 }
 
-.ws-black       { background: var(--dark) !important; color: #fff !important; }
-.ws-light-green { background: #d9eee1 !important; color: #000 !important; }
+.ws-black {
+  background: var(--dark) !important;
+  color: #fff !important;
+}
 
-.hero-content { max-width: 800px; margin: 0 auto; padding: 0 20px; }
+.ws-light-green {
+  background: #D0EAD8 !important;
+  /* সামান্য গাঢ় — বিশুদ্ধ সাদার চেয়ে চোখবান্ধব */
+  color: #1E2B3C !important;
+}
 
-.hero-h1      { font-size: 68px; font-weight: 700; line-height: 1.1; }
-.hero-subtitle { color: var(--accent2); font-weight: 600; font-size: 21px; margin-top: 22px; line-height: 1.6; }
-.hero-cta     { color: #fff; font-size: 21px; font-weight: 700; margin-top: 18px; }
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
-.topic-section { padding: 50px 0; }
+.hero-h1 {
+  font-size: 68px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.hero-subtitle {
+  color: var(--accent2);
+  font-weight: 600;
+  font-size: 21px;
+  margin-top: 22px;
+  line-height: 1.6;
+}
+
+.hero-cta {
+  color: #fff;
+  font-size: 21px;
+  font-weight: 700;
+  margin-top: 18px;
+}
+
+.topic-section {
+  padding: 50px 0;
+}
 
 .topic-inner {
   max-width: 980px;
@@ -223,59 +327,218 @@ aside a.active {
   gap: 40px;
   padding: 0 20px;
 }
-.topic-text { flex: 1; }
-.topic-text.center { text-align: center; }
-.topic-title { font-size: 88px; font-weight: 700; line-height: 1; margin-bottom: 10px; }
-.topic-desc  { font-size: 18px; font-weight: 600; margin-bottom: 20px; }
-.topic-code  { flex: 1; }
+
+.topic-text {
+  flex: 1;
+}
+
+.topic-text.center {
+  text-align: center;
+}
+
+.topic-title {
+  font-size: 88px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.topic-desc {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.topic-code {
+  flex: 1;
+}
 
 .tut-button {
   display: block;
-  width: 240px; margin: 8px auto;
+  width: 240px;
+  margin: 8px auto;
   padding: 10px 16px;
   border-radius: 25px;
-  font-size: 17px; font-weight: 600;
+  font-size: 17px;
+  font-weight: 600;
   text-align: center;
   transition: opacity 0.2s;
   cursor: pointer;
 }
-.tut-button:hover { opacity: 0.85; }
-.btn-green  { background: var(--accent); color: #fff; }
-.btn-yellow { background: var(--accent2); color: #000; }
-.btn-dark   { background: var(--dark); color: #fff; }
-.btn-light  { background: #f7f7f7; color: #000; }
 
-.code-card { background: #e7e9eb; border-radius: 8px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,.1); }
-.code-card h3 { font-size: 18px; font-weight: 600; margin-bottom: 10px; color: var(--dark); }
-.code-block { background: #fff; border-left: 4px solid var(--accent); padding: 12px 16px; border-radius: 0 4px 4px 0; overflow-x: auto; }
-.code-block pre { font-family: Consolas,Menlo,monospace; font-size: 14px; line-height: 1.8; white-space: pre; color: #333; }
+.tut-button:hover {
+  opacity: 0.85;
+}
 
-.c-gray { color: slategray; } .c-tag { color: #905; } .c-attr { color: green; }
-.c-val  { color: #005cc5; }  .c-str { color: green; } .c-kw   { color: #005cc5; }
-.c-fn   { color: black; }   .c-selector { color: #905; } .c-prop { color: #d73a49; }
-.c-brace { color: #999; }
+.btn-green {
+  background: var(--accent);
+  color: #fff;
+}
 
-.css-section { background: #f0d9b5; color: black; margin: 50px 0; padding: 10px 0; }
-.js-section  { background: var(--dark) !important; color: #fff !important; margin-bottom: 50px; padding: 10px 0; }
-.js-section .code-card h3 { color: var(--dark); }
+.btn-yellow {
+  background: var(--accent2);
+  color: #1E2B3C;
+}
+
+.btn-dark {
+  background: var(--dark);
+  color: #fff;
+}
+
+.btn-light {
+  background: #EDEAE2;
+  color: #1E2B3C;
+}
+
+.code-card {
+  background: #E0DBD2;
+  /* উষ্ণ ধূসর */
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
+}
+
+.code-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--dark);
+}
+
+.code-block {
+  background: #F0EBE1;
+  /* উষ্ণ ক্রিম — বিশুদ্ধ সাদার চেয়ে চোখবান্ধব */
+  border-left: 4px solid var(--accent);
+  padding: 12px 16px;
+  border-radius: 0 4px 4px 0;
+  overflow-x: auto;
+}
+
+.code-block pre {
+  font-family: Consolas, Menlo, monospace;
+  font-size: 14px;
+  line-height: 1.8;
+  white-space: pre;
+  color: #2B3544;
+}
+
+/* Code Syntax Colors */
+.c-gray {
+  color: slategray;
+}
+
+.c-tag {
+  color: #905;
+}
+
+.c-attr {
+  color: green;
+}
+
+.c-val {
+  color: #005cc5;
+}
+
+.c-str {
+  color: green;
+}
+
+.c-kw {
+  color: #005cc5;
+}
+
+.c-fn {
+  color: black;
+}
+
+.c-selector {
+  color: #905;
+}
+
+.c-prop {
+  color: #d73a49;
+}
+
+.c-brace {
+  color: #888;
+}
+
+.css-section {
+  background: #EDD5A0;
+  /* উষ্ণ বাদামি-হলুদ — আগের মতোই কিন্তু সামান্য নরম */
+  color: #1E2B3C;
+  margin: 50px 0;
+  padding: 10px 0;
+}
+
+.js-section {
+  background: var(--dark) !important;
+  color: #fff !important;
+  margin-bottom: 50px;
+  padding: 10px 0;
+}
+
+.js-section .code-card h3 {
+  color: var(--dark);
+}
 
 /* ============================================================
    FOOTER
 ============================================================ */
-footer { width: 100%; background: #111; }
-.footer-top { max-width: 980px; margin: 0 auto; display: flex; align-items: center; gap: 60px; padding: 24px 20px; }
-.footer-logo img { width: 70px; }
-.footer-nav { display: flex; gap: 30px; }
-.footer-nav li a { color: var(--accent2); font-size: 16px; font-weight: 500; transition: color 0.2s; }
-.footer-nav li a:hover { color: var(--accent); }
-.copyright { text-align: center; color: #aaa; font-size: 14px; padding: 12px 20px 20px; border-top: 1px solid #333; }
+footer {
+  width: 100%;
+  background: #111B26;
+}
+
+.footer-top {
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  padding: 24px 20px;
+}
+
+.footer-logo img {
+  width: 70px;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 30px;
+}
+
+.footer-nav li a {
+  color: var(--accent2);
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.footer-nav li a:hover {
+  color: var(--accent);
+}
+
+.copyright {
+  text-align: center;
+  color: #8A9BB0;
+  font-size: 14px;
+  padding: 12px 20px 20px;
+  border-top: 1px solid #1E2E40;
+}
 
 /* ============================================================
    RESPONSIVE — Tablet (≤ 1024px)
 ============================================================ */
 @media (max-width: 1024px) {
-  aside { width: 200px; }
-  aside ul li a { font-size: 13px; padding: 9px 14px; }
+  aside {
+    width: 200px;
+  }
+
+  aside ul li a {
+    font-size: 13px;
+    padding: 9px 14px;
+  }
 }
 
 /* ============================================================
@@ -283,24 +546,35 @@ footer { width: 100%; background: #111; }
 ============================================================ */
 @media (max-width: 768px) {
 
-  /* Header height কমাও */
-  :root { --header-h: 58px; }
+  :root {
+    --header-h: 58px;
+  }
 
-  header img { width: 48px; }
+  header img {
+    width: 48px;
+  }
 
-  /* Desktop nav লুকাও, hamburger দেখাও */
-  .nav-list    { display: none; }
-  .hamburger   { display: flex; }
-  .nav-drawer  { display: block; }
+  .nav-list {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-drawer {
+    display: block;
+  }
 
   /* ── Sidebar → Left slide-in drawer ── */
   aside {
     position: fixed;
-    top: 0; left: -285px;
+    top: 0;
+    left: -285px;
     width: 280px;
     height: 100vh;
     padding-top: calc(var(--header-h) + 12px);
-    background: #1e2230;
+    background: #1B2936;
     z-index: 998;
     transition: left 0.3s ease;
     box-shadow: none;
@@ -309,13 +583,15 @@ footer { width: 100%; background: #111; }
 
   aside.sidebar-open {
     left: 0;
-    box-shadow: 6px 0 24px rgba(0,0,0,0.35);
+    box-shadow: 6px 0 24px rgba(0, 0, 0, 0.35);
   }
 
-  aside ul li { border-bottom: 1px solid rgba(255,255,255,0.07); }
+  aside ul li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  }
 
   aside ul li a {
-    color: #bbb;
+    color: #9AAFC2;
     font-size: 15px;
     padding: 13px 22px;
     border-left-color: transparent;
@@ -333,19 +609,20 @@ footer { width: 100%; background: #111; }
   .sidebar-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     z-index: 997;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s;
   }
+
   .sidebar-overlay.active {
     display: block;
     opacity: 1;
     pointer-events: all;
   }
 
-  /* ── FAB: sidebar toggle button ── */
+  /* ── FAB ── */
   .sidebar-toggle {
     display: flex;
     align-items: center;
@@ -363,42 +640,108 @@ footer { width: 100%; background: #111; }
     font-family: "Tiro Bangla", sans-serif;
     cursor: pointer;
     z-index: 995;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.28);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.28);
     transition: background 0.2s, transform 0.2s;
   }
-  .sidebar-toggle:hover { background: var(--accent); transform: scale(1.04); }
-  .sidebar-toggle svg { width: 17px; height: 17px; flex-shrink: 0; }
+
+  .sidebar-toggle:hover {
+    background: var(--accent);
+    transform: scale(1.04);
+  }
+
+  .sidebar-toggle svg {
+    width: 17px;
+    height: 17px;
+    flex-shrink: 0;
+  }
 
   /* ── Full-width layout ── */
-  .d_flex { flex-direction: column; }
+  .d_flex {
+    flex-direction: column;
+  }
 
   /* Index page */
-  .hero-section { padding: 76px 16px 50px; }
-  .hero-h1      { font-size: 34px; }
-  .hero-subtitle{ font-size: 14px; margin-top: 14px; }
-  .hero-cta     { font-size: 15px; }
+  .hero-section {
+    padding: 76px 16px 50px;
+  }
 
-  .topic-inner  { flex-direction: column; gap: 18px; padding: 0 14px; }
-  .topic-title  { font-size: 48px; }
-  .topic-desc   { font-size: 15px; }
+  .hero-h1 {
+    font-size: 34px;
+  }
 
-  .tut-button   { width: 100%; max-width: 300px; font-size: 15px; }
+  .hero-subtitle {
+    font-size: 14px;
+    margin-top: 14px;
+  }
+
+  .hero-cta {
+    font-size: 15px;
+  }
+
+  .topic-inner {
+    flex-direction: column;
+    gap: 18px;
+    padding: 0 14px;
+  }
+
+  .topic-title {
+    font-size: 48px;
+  }
+
+  .topic-desc {
+    font-size: 15px;
+  }
+
+  .tut-button {
+    width: 100%;
+    max-width: 300px;
+    font-size: 15px;
+  }
+
+  /* Table & pre */
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  pre {
+    overflow: auto;
+  }
 
   /* Footer */
-  .footer-top   { flex-direction: column; gap: 14px; text-align: center; padding: 18px 16px; }
-  .footer-nav   { flex-wrap: wrap; justify-content: center; gap: 12px; }
+  .footer-top {
+    flex-direction: column;
+    gap: 14px;
+    text-align: center;
+    padding: 18px 16px;
+  }
+
+  .footer-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
 }
 
 /* ============================================================
    RESPONSIVE — Small Mobile (≤ 480px)
 ============================================================ */
 @media (max-width: 480px) {
-  .hero-h1     { font-size: 26px; }
-  .topic-title { font-size: 36px; }
-  aside        { width: 260px; }
+  .hero-h1 {
+    font-size: 26px;
+  }
+
+  .topic-title {
+    font-size: 36px;
+  }
+
+  aside {
+    width: 260px;
+  }
 
   .sidebar-toggle {
-    bottom: 16px; right: 14px;
+    bottom: 16px;
+    right: 14px;
     padding: 10px 14px;
     font-size: 13px;
   }
@@ -408,196 +751,20 @@ footer { width: 100%; background: #111; }
    PRINT
 ============================================================ */
 @media print {
-  header, aside, .sidebar-toggle, .sidebar-overlay, .nav-drawer { display: none !important; }
-  .wrapper { padding-top: 0; }
-  .d_flex  { display: block; }
-}
-/* =========================
-ONLY RESPONSIVE FIX
-Nothing else changed
-========================= */
 
-img{
-    max-width:100%;
-    height:auto;
-}
-
-body{
-    overflow-x:hidden;
-}
-
-/* Mobile */
-@media (max-width:768px){
-
-/* navbar */
-.nav-list{
-    display:none;
-}
-
-.hamburger{
-    display:flex;
-}
-
-/* hero */
-.hero-content{
-    padding:50px 15px;
-}
-
-.hero-h1{
-    font-size:42px;
-}
-
-.hero-subtitle{
-    font-size:18px;
-}
-
-/* sections */
-.topic-inner{
-    flex-direction:column;
-}
-
-.topic-title{
-    font-size:34px;
-}
-
-.topic-desc{
-    font-size:16px;
-}
-
-.tut-button{
-    display:block;
-    width:100%;
-    margin:10px 0;
-    text-align:center;
-}
-
-/* sidebar */
-aside{
-    position:fixed;
-    left:-100%;
-}
-
-aside.sidebar-open{
-    left:0;
-}
-
-/* tables */
-table{
-    display:block;
-    overflow-x:auto;
-}
-
-/* code */
-pre{
-    overflow:auto;
-}
-
-/* footer */
-.footer-top{
-    flex-direction:column;
-    text-align:center;
-    gap:20px;
-}
-
-}
-
-/* Small mobile */
-@media (max-width:480px){
-
-.hero-h1{
-    font-size:30px;
-}
-
-.topic-title{
-    font-size:28px;
-}
-
-h1{
-    font-size:26px;
-}
-
-h2{
-    font-size:22px;
-}
-
-}
-
-/* ================================================================
-   RESPONSIVE — Tutorial Content
-================================================================ */
-
-/* Tablet */
-@media (max-width: 1024px) {
-  .content { padding: 26px 26px 50px; }
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .content {
-    padding: 18px 14px 80px; /* bottom: 80px — FAB button clearance */
+  header,
+  aside,
+  .sidebar-toggle,
+  .sidebar-overlay,
+  .nav-drawer {
+    display: none !important;
   }
 
-  .content h1.center { font-size: 20px; }
-  .content p.center  { font-size: 13px; }
-
-  .example-box {
-    padding: 14px 14px;
-    border-radius: 8px;
-    margin-bottom: 14px;
+  .wrapper {
+    padding-top: 0;
   }
 
-  .example-box h2 { font-size: 16px; }
-  .example-box h3 { font-size: 14px; margin: 12px 0 6px; }
-  .example-box p  { font-size: 14px; line-height: 1.75; }
-
-  .example-box ol li { font-size: 14px; }
-
-  code { font-size: 13px; }
-
-  .code-box {
-    font-size: 12px;
-    padding: 12px 14px;
-    line-height: 1.75;
+  .d_flex {
+    display: block;
   }
-
-  /* Table — scroll already handled globally */
-  .size-chart {
-    font-size: 13px;
-  }
-  .size-chart th,
-  .size-chart td {
-    padding: 7px 10px;
-  }
-
-  .warning-box,
-  .tip-box {
-    font-size: 13px;
-    padding: 10px 12px;
-  }
-
-  .tag-badge {
-    font-size: 11px;
-    padding: 2px 8px;
-    display: inline-block;
-    margin: 3px 0 0 4px;
-  }
-
-  .section-divider { margin: 16px 0; }
-}
-
-/* Small mobile */
-@media (max-width: 480px) {
-  .content { padding: 14px 10px 80px; }
-
-  .content h1.center { font-size: 17px; }
-
-  .example-box { padding: 12px 10px; }
-  .example-box h2 { font-size: 14px; }
-  .example-box h3 { font-size: 13px; }
-  .example-box p  { font-size: 13px; }
-
-  .code-box { font-size: 11px; padding: 10px 10px; }
-  code       { font-size: 12px; }
-
-  .tag-badge { font-size: 10px; }
 }
