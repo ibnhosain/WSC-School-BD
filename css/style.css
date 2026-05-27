@@ -1,68 +1,92 @@
 /* ============================================================
-   style.css — DevShikhi | HTML Tutorial Content Styles
+   style.css — WSC School BD | HTML Tutorial Content Styles
+   চোখবান্ধব রঙ — দীর্ঘক্ষণ পড়ার জন্য উপযুক্ত
 ============================================================ */
+
+:root {
+  --accent: #04aa6d;
+  --accent2: #fff4a3;
+  --dark: #1D2B3A;
+  /* গাঢ় নেভি */
+  --border: #D5CFC6;
+  --header-h: 70px;
+  --text-color: #1E2B3C;
+  /* বিশুদ্ধ কালোর পরিবর্তে গাঢ় নেভি */
+  --bg-color: #F5F1E8;
+  /* বিশুদ্ধ সাদার পরিবর্তে উষ্ণ ক্রিম */
+}
 
 /* ── Content Area ── */
 .content {
   flex: 1;
   padding: 32px 40px 60px;
   min-width: 0;
-  background: #22242a;
+  background: #1D2B3A;
+  /* গাঢ় নেভি — বিশুদ্ধ কালোর চেয়ে নরম */
 }
 
-.content section { margin-bottom: 60px; }
+.content section {
+  margin-bottom: 60px;
+}
 
 .content h1.center {
   font-size: 26px;
   font-weight: 700;
-  color: #fff;
+  color: #E8F0F8 !important;
+  /* উষ্ণ সাদা */
   margin-bottom: 8px;
 }
 
 .content p.center {
-  color: #ddd;
+  color: #9AAFC2 !important;
+  /* মৃদু নীলাভ — #ddd-র চেয়ে চোখবান্ধব */
   font-size: 15px;
   margin-bottom: 20px;
 }
 
-.center { text-align: center; }
+.center {
+  text-align: center;
+}
 
 /* ── Divider ── */
 .section-divider {
   border: none;
-  border-top: 4px dashed #c6c6c6;
+  border-top: 4px dashed rgba(180, 195, 210, .25);
   margin: 28px 0;
 }
 
 /* ── Example Box ── */
 .example-box {
-  background: #f1f8ff;
-  border: 1px solid #2c2e35;
+  color: var(--text-color) !important;
+  background: #F5F1E8 !important;
+  /* উষ্ণ ক্রিম */
+  border: 1px solid var(--border);
   border-radius: 10px;
   padding: 24px 28px;
   margin-bottom: 20px;
+  overflow-x: hidden;
 }
 
 .example-box h2 {
   font-size: 20px;
   font-weight: 600;
-  color: #282a35;
+  color: var(--text-color);
   margin-bottom: 14px;
   padding-bottom: 8px;
-  border-bottom: 2px solid #e5e7eb;
+  border-bottom: 2px solid #D5CFC6;
 }
 
 .example-box h3 {
   font-size: 17px;
   font-weight: 600;
-  color: #000;
+  color: var(--text-color);
   margin: 16px 0 8px;
 }
 
 .example-box p {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.85;
-  color: #111;
+  color: var(--text-color);
   margin-bottom: 10px;
 }
 
@@ -70,29 +94,33 @@
   padding-left: 22px;
   margin: 10px 0;
 }
+
 .example-box ol li {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 2;
-  color: #374151;
+  color: var(--text-color);
   list-style-type: decimal;
 }
 
 /* ── Inline Code ── */
 code {
   font-family: Consolas, Menlo, "Courier New", monospace;
-  background: #e9ecef;
-  color: #c7254e;
+  background: #E5DFD4;
+  /* উষ্ণ ধূসর */
+  color: #b01035;
   padding: 2px 6px;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 /* ── Code Box ── */
 .code-box {
-  background: #2c2e35;
-  color: #81c995;
+  background: #182030;
+  /* আরও গাঢ় নেভি — চোখে নরম */
+  color: #85C9A0;
+  /* মৃদু সবুজ */
   font-family: Consolas, Menlo, monospace;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.9;
   padding: 16px 20px;
   border-radius: 8px;
@@ -104,36 +132,38 @@ code {
 
 /* ── Warning Box ── */
 .warning-box {
-  background: rgba(245,158,11,.08);
-  border-left: 4px solid #f59e0b;
-  border-right: 2px solid #000;
-  border-bottom: 2px solid #000;
+  background: rgba(217, 123, 58, .08);
+  border-left: 4px solid #D97B3A;
+  border-right: 2px solid var(--border);
+  border-bottom: 2px solid var(--border);
   padding: 12px 16px;
   margin-bottom: 10px;
   border-radius: 0 8px 8px 0;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.7;
-  box-shadow: 2px 4px 12px rgba(245,158,11,.12);
+  color: var(--text-color);
+  box-shadow: 2px 4px 12px rgba(217, 123, 58, .08);
 }
 
 /* ── Tip Box ── */
 .tip-box {
-  background: rgba(34,197,94,.08);
-  border-left: 4px solid #22c55e;
-  border-right: 2px solid #000;
-  border-bottom: 2px solid #000;
+  background: rgba(4, 170, 109, .07);
+  border-left: 4px solid #04aa6d;
+  border-right: 2px solid var(--border);
+  border-bottom: 2px solid var(--border);
   padding: 12px 16px;
   margin-bottom: 10px;
   border-radius: 0 8px 8px 0;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.7;
-  box-shadow: 2px 4px 12px rgba(34,197,94,.1);
+  color: var(--text-color);
+  box-shadow: 2px 4px 12px rgba(4, 170, 109, .07);
 }
 
 /* ── Tag Badge ── */
 .tag-badge {
   display: inline-block;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   padding: 2px 10px;
   border-radius: 100px;
@@ -142,52 +172,189 @@ code {
 }
 
 /* ── Table ── */
-/* example-box-এর ভেতরে table overflow ঠেকাতে */
-.example-box {
-  overflow-x: hidden; /* extra safety */
-}
-
-.size-chart {
-  width: 100%;
-  min-width: 500px;        /* ছোট screen-এ scroll হবে */
-  border-collapse: collapse;
-  font-size: 15px;
-  margin-top: 10px;
-}
-
-/* Table wrapper — overflow scroll */
 .example-box .size-chart {
   display: block;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  min-width: unset;        /* display:block হলে min-width দরকার নেই */
+  min-width: unset;
 }
 
-/* table ট্যাগকে আলাদা রাখো */
 table.size-chart {
   display: table;
+  width: 100%;
   min-width: 480px;
+  border-collapse: collapse;
+  font-size: 16px;
+  margin-top: 10px;
 }
 
 .size-chart th {
-  background: #282a35;
-  color: #fff;
+  background: #1D2B3A;
+  color: #E8F0F8;
   padding: 10px 14px;
   text-align: left;
   font-weight: 600;
   white-space: nowrap;
 }
+
 .size-chart td {
   padding: 9px 14px;
-  border-bottom: 1px solid #c7c7c7;
-  color: #000;
+  border-bottom: 1px solid #C8C0B4;
+  color: var(--text-color);
   vertical-align: middle;
 }
-.size-chart tr:nth-child(even) td { background: #f9fafb; }
-.size-chart tr:hover td { background: #04AA6D !important; color: #fff; }
+
+.size-chart tr:nth-child(even) td {
+  background: #ECE7DE;
+}
+
+.size-chart tr:hover td {
+  background: #04AA6D !important;
+  color: #fff;
+}
 
 /* ── Heading demos inside example-box ── */
-.example-box h1 { font-size: 2em; font-weight: 700; margin: 8px 0; }
-.example-box h4 { font-size: 1em; font-weight: 600; }
-.example-box h5 { font-size: .83em; }
-.example-box h6 { font-size: .67em; }
+.example-box h1 {
+  font-size: 2em;
+  font-weight: 700;
+  margin: 8px 0;
+}
+
+.example-box h4 {
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.example-box h5 {
+  font-size: .83em;
+}
+
+.example-box h6 {
+  font-size: .67em;
+}
+
+/* ============================================================
+   RESPONSIVE — Tutorial Content
+============================================================ */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .content {
+    padding: 26px 26px 50px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .content {
+    padding: 18px 14px 80px;
+  }
+
+  .content h1.center {
+    font-size: 20px;
+  }
+
+  .content p.center {
+    font-size: 13px;
+  }
+
+  .example-box {
+    padding: 14px 14px;
+    border-radius: 8px;
+    margin-bottom: 14px;
+  }
+
+  .example-box h2 {
+    font-size: 16px;
+  }
+
+  .example-box h3 {
+    font-size: 14px;
+    margin: 12px 0 6px;
+  }
+
+  .example-box p {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .example-box ol li {
+    font-size: 14px;
+  }
+
+  code {
+    font-size: 13px;
+  }
+
+  .code-box {
+    font-size: 12px;
+    padding: 12px 14px;
+    line-height: 1.75;
+  }
+
+  .size-chart {
+    font-size: 13px;
+  }
+
+  .size-chart th,
+  .size-chart td {
+    padding: 7px 10px;
+  }
+
+  .warning-box,
+  .tip-box {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+
+  .tag-badge {
+    font-size: 11px;
+    padding: 2px 8px;
+    display: inline-block;
+    margin: 3px 0 0 4px;
+  }
+
+  .section-divider {
+    margin: 16px 0;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .content {
+    padding: 14px 10px 80px;
+  }
+
+  .content h1.center {
+    font-size: 17px;
+  }
+
+  .example-box {
+    padding: 12px 10px;
+  }
+
+  .example-box h2 {
+    font-size: 14px;
+  }
+
+  .example-box h3 {
+    font-size: 13px;
+  }
+
+  .example-box p {
+    font-size: 13px;
+  }
+
+  .code-box {
+    font-size: 11px;
+    padding: 10px 10px;
+  }
+
+  code {
+    font-size: 12px;
+  }
+
+  .tag-badge {
+    font-size: 10px;
+  }
+}
