@@ -278,14 +278,16 @@ aside a.active {
 }
 
 .ws-black {
-  background: var(--dark) !important;
   color: #fff !important;
+  background-image: url("../images/hero-bg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: soft-light;
+  background-position: center;
 }
 
 .ws-light-green {
-  background: #D0EAD8 !important;
-  /* সামান্য গাঢ় — বিশুদ্ধ সাদার চেয়ে চোখবান্ধব */
-  color: #1E2B3C !important;
+  background-color: #E37933 !important;
 }
 
 .hero-content {
@@ -363,6 +365,7 @@ aside a.active {
   font-weight: 600;
   text-align: center;
   transition: opacity 0.2s;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   cursor: pointer;
 }
 
@@ -395,7 +398,7 @@ aside a.active {
   /* উষ্ণ ধূসর */
   border-radius: 8px;
   padding: 16px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
 .code-card h3 {
@@ -406,76 +409,102 @@ aside a.active {
 }
 
 .code-block {
-  background: #F0EBE1;
-  /* উষ্ণ ক্রিম — বিশুদ্ধ সাদার চেয়ে চোখবান্ধব */
-  border-left: 4px solid var(--accent);
-  padding: 12px 16px;
-  border-radius: 0 4px 4px 0;
+
+  background: #1E1E1E;
+
+  border-left:
+    4px solid #007ACC;
+
+  padding: 16px;
+
+  border-radius: 8px;
+
   overflow-x: auto;
+
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, .04);
+
 }
 
 .code-block pre {
-  font-family: Consolas, Menlo, monospace;
+
+  font-family:
+    Consolas,
+    'Courier New',
+    monospace;
+
   font-size: 14px;
+
   line-height: 1.8;
+
   white-space: pre;
-  color: #2B3544;
+
+  color: #D4D4D4;
+
 }
 
 /* Code Syntax Colors */
+/* VS Code Dark+ Syntax */
+
 .c-gray {
-  color: slategray;
+  color: #6A9955;
 }
 
+/* tag */
 .c-tag {
-  color: #905;
+  color: #569CD6;
 }
 
+/* class href src */
 .c-attr {
-  color: green;
+  color: #9CDCFE;
 }
 
+/* value */
 .c-val {
-  color: #005cc5;
+  color: #CE9178;
 }
 
+/* string */
 .c-str {
-  color: green;
+  color: #CE9178;
 }
 
+/* keyword */
 .c-kw {
-  color: #005cc5;
+  color: #C586C0;
 }
 
+/* function */
 .c-fn {
-  color: black;
+  color: #DCDCAA;
 }
 
+/* selector */
 .c-selector {
-  color: #905;
+  color: #D7BA7D;
 }
 
+/* property */
 .c-prop {
-  color: #d73a49;
+  color: #9CDCFE;
 }
 
+/* braces */
 .c-brace {
-  color: #888;
+  color: #D4D4D4;
 }
 
 .css-section {
-  background: #EDD5A0;
-  /* উষ্ণ বাদামি-হলুদ — আগের মতোই কিন্তু সামান্য নরম */
-  color: #1E2B3C;
+  background-color: #42A5F5 !important;
   margin: 50px 0;
-  padding: 10px 0;
+  padding: 50px 0;
 }
 
 .js-section {
-  background: var(--dark) !important;
-  color: #fff !important;
+  background-color: #F7DF1E !important;
   margin-bottom: 50px;
-  padding: 10px 0;
+  padding: 50px 0;
 }
 
 .js-section .code-card h3 {
