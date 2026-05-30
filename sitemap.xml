@@ -4,38 +4,38 @@
 
   <!-- হোমপেজ -->
   <url>
-    <loc>https://wscschoolbd.com/</loc>
-    <lastmod>2025-06-01</lastmod>
+    <loc>https://easycoding.space/</loc>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="bn" href="https://wscschoolbd.com/" />
+    <xhtml:link rel="alternate" hreflang="bn" href="https://easycoding.space/" />
   </url>
 
   <!-- HTML Tutorial -->
   <url>
-    <loc>https://wscschoolbd.com/html.html</loc>
-    <lastmod>2025-06-01</lastmod>
+    <loc>https://easycoding.space/html.html</loc>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="bn" href="https://wscschoolbd.com/html.html" />
+    <xhtml:link rel="alternate" hreflang="bn" href="https://easycoding.space/html.html" />
   </url>
 
   <!-- CSS Tutorial -->
   <url>
-    <loc>https://wscschoolbd.com/css.html</loc>
-    <lastmod>2025-06-01</lastmod>
+    <loc>https://easycoding.space/css.html</loc>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="bn" href="https://wscschoolbd.com/css.html" />
+    <xhtml:link rel="alternate" hreflang="bn" href="https://easycoding.space/css.html" />
   </url>
 
   <!-- JavaScript Tutorial -->
   <url>
-    <loc>https://wscschoolbd.com/js.html</loc>
-    <lastmod>2025-06-01</lastmod>
+    <loc>https://easycoding.space/js.html</loc>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="bn" href="https://wscschoolbd.com/js.html" />
+    <xhtml:link rel="alternate" hreflang="bn" href="https://easycoding.space/js.html" />
   </url>
 
 </urlset>
