@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- background -->
+  <rect x="0" y="0" width="32" height="32" rx="6" fill="#E8621A"/>
+  <!-- left bracket -->
+  <text x="2" y="16" font-family="'Courier New', monospace" font-size="20" font-weight="900" fill="#ffffff" dominant-baseline="middle">&lt;</text>
+  <!-- slash -->
+  <text x="16" y="16" font-family="'Courier New', monospace" font-size="13" font-weight="900" fill="#111111" text-anchor="middle" dominant-baseline="middle">/</text>
+  <!-- right bracket -->
+  <text x="20" y="16" font-family="'Courier New', monospace" font-size="20" font-weight="900" fill="#ffffff" dominant-baseline="middle">&gt;</text>
+</svg>
