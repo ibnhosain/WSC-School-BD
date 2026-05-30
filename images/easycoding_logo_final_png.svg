@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 150" width="520" height="150">
+
+  <!-- white background -->
+  <rect x="0" y="0" width="520" height="150" fill="#ffffff"/>
+
+  <!-- left bracket -->
+  <text x="5" y="78" font-family="'Courier New', monospace" font-size="105" font-weight="900" fill="#E8621A" dominant-baseline="middle">&lt;</text>
+  <!-- slash centered -->
+  <text x="88" y="78" font-family="'Courier New', monospace" font-size="65" font-weight="900" fill="#111111" text-anchor="middle" dominant-baseline="middle">/</text>
+  <!-- right bracket -->
+  <text x="115" y="78" font-family="'Courier New', monospace" font-size="105" font-weight="900" fill="#E8621A" dominant-baseline="middle">&gt;</text>
+
+  <!-- Easy -->
+  <text x="182" y="42" font-family="'Courier New', monospace" font-size="48" font-weight="900" fill="#E8621A" dominant-baseline="middle">Easy</text>
+  <!-- Coding.space -->
+  <text x="182" y="95" font-family="'Courier New', monospace" font-size="48" font-weight="900" fill="#111111" dominant-baseline="middle">Coding<tspan font-size="24" font-weight="900" fill="#E8621A">.space</tspan></text>
+
+  <!-- tagline -->
+  <text x="182" y="135" font-family="'Hind Siliguri', Arial, sans-serif" font-size="20" font-weight="700" fill="#222222" dominant-baseline="middle">বাংলায় কোডিং শেখায়</text>
+
+</svg>
